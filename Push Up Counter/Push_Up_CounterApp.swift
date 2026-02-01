@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct Push_Up_CounterApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var viewModel = PushUpViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(viewModel)
+                .preferredColorScheme(.dark)
+                .onAppear {
+                    viewModel.requestNotificationPermission()
+                }
         }
     }
 }
