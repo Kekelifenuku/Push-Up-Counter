@@ -857,7 +857,7 @@ struct SettingsView: View {
 
                     // 📤 Share App
                     ShareLink(
-                        item: URL(string: "https://apps.apple.com/app/id6758363765")!
+                        item: URL(string: "https://apps.apple.com/app/id6758590012")!
                     ) {
                         Label("Share App", systemImage: "square.and.arrow.up")
                     }
